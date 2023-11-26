@@ -10,9 +10,9 @@ export default function SideBar(option,setOption) {
                 {
                     sidebarData.map( (item,idx) => 
                     <li 
-                        id = {window.location.pathname === item[1]?'active':''}
+                        id = {option===idx?'active':''}
                         className='row' 
-                        key={item[1]}
+                        key={idx}
                         onClick={() => {
                             setOption(idx);
                             }}>

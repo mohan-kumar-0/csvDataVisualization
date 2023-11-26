@@ -8,7 +8,7 @@ import SideBar from './sidebar/SideBar';
 import { useState } from 'react';
 
 function App() {
-  const maxSize = 50;
+  const maxSize = 500;
   const [option,setOption] = useState(0);
   return (
     <div className="App">
