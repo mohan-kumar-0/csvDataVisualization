@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import LineGraph from './graphs/LineGraph';
+import BarGraph from './graphs/BarGraph';
+import ScatterPlot from './graphs/ScatterPlot';
+import StackedBarGraph from './graphs/StackedBarGraph';
+import StackedGroupedGraph from './graphs/StackedGroupedGraph';
+import SideBar from './sidebar/SideBar';
 
 function App() {
+  const maxSize = 50;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        SideBar()
+      }
+      {
+        ScatterPlot(maxSize)
+      }
     </div>
   );
 }
