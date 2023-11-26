@@ -1,4 +1,4 @@
-export default function SideBar() {
+export default function SideBar(option,setOption) {
     const sidebarData = [['Scatter Plot','/scatter'],
                         ['Line Graph','/line'],
                         ['Bar Graph','/bar'],
@@ -14,7 +14,7 @@ export default function SideBar() {
                         className='row' 
                         key={item[1]}
                         onClick={() => {
-                            window.location.pathname = item[1];
+                            setOption(idx);
                             }}>
                         {item[0]}
                     </li>

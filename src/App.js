@@ -5,28 +5,30 @@ import ScatterPlot from './graphs/ScatterPlot';
 import StackedBarGraph from './graphs/StackedBarGraph';
 import StackedGroupedGraph from './graphs/StackedGroupedGraph';
 import SideBar from './sidebar/SideBar';
+import { useState } from 'react';
 
 function App() {
   const maxSize = 50;
+  const [option,setOption] = useState(0);
   return (
     <div className="App">
       {
-        SideBar()
+        SideBar(option,setOption)
       }
       {
-        window.location.pathname==='/scatter' && ScatterPlot(maxSize)
+        option===0 && ScatterPlot(maxSize)
       }
       {
-        window.location.pathname==='/line' && LineGraph(maxSize)
+        option===1 && LineGraph(maxSize)
       }
       {
-        window.location.pathname==='/bar' && BarGraph(maxSize)
+        option===2 && BarGraph(maxSize)
       }
       {
-        window.location.pathname==='/stacked' && StackedBarGraph(maxSize)
+        option===3 && StackedBarGraph(maxSize)
       }
       {
-        window.location.pathname==='/grouped' && StackedGroupedGraph(maxSize)
+        option===4 && StackedGroupedGraph(maxSize)
       }
     </div>
   );
