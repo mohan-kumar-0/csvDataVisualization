@@ -81,7 +81,7 @@ export default function ScatterPlot(maxSize) {
                     </div>
                 ):
                 (
-                    <div>
+                    <div className='graph'>
                         <Scatter options={chartOption} data={chartData} />
                     </div>
                 )

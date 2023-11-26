@@ -74,7 +74,7 @@ export default function StackedBarGraph(maxSize) {
                     </div>
                 ):
                 (
-                    <div>
+                    <div className="graph">
                         <Bar options={chartOption} data={chartData} />
                     </div>
                 )

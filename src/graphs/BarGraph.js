@@ -69,8 +69,8 @@ export default function BarGraph(maxSize) {
                     </div>
                 ):
                 (
-                    <div>
-                        <Bar width={300} height={100} options={chartOption} data={chartData} />
+                    <div className="graph">
+                        <Bar options={chartOption} data={chartData} />
                     </div>
                 )
             }

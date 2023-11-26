@@ -79,7 +79,7 @@ export default function LineGraph(maxSize) {
                     </div>
                 ):
                 (
-                    <div>
+                    <div className="graph">
                         <Line options={chartOption} data={chartData} />
                     </div>
                 )

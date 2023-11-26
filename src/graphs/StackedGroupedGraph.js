@@ -80,7 +80,7 @@ export default function StackedGroupedGraph(maxSize) {
                     </div>
                 ):
                 (
-                    <div>
+                    <div className="graph">
                         <Bar options={chartOption} data={chartData} />
                     </div>
                 )

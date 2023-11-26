@@ -14,7 +14,19 @@ function App() {
         SideBar()
       }
       {
-        ScatterPlot(maxSize)
+        window.location.pathname==='/scatter' && ScatterPlot(maxSize)
+      }
+      {
+        window.location.pathname==='/line' && LineGraph(maxSize)
+      }
+      {
+        window.location.pathname==='/bar' && BarGraph(maxSize)
+      }
+      {
+        window.location.pathname==='/stacked' && StackedBarGraph(maxSize)
+      }
+      {
+        window.location.pathname==='/grouped' && StackedGroupedGraph(maxSize)
       }
     </div>
   );
